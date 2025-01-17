@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Library of BabelFish</title>
+</head>
+<body>
+    <h1>Library of BabelFish</h1>
+    <div class="container">
+        <div id="title-container">
+            <h2>Title</h2>
+            <p id="titles"></p>
+        </div>
+        <div id="author-container">
+            <h2>Author</h2>
+            <p id="authors"></p>
+        </div>
+        <div id="genre-container">
+            <h2>Genre</h2>
+            <p id="genres"></p>
+        </div>
+        <div id="page-container">
+            <h2>Length</h2>
+            <p id="page-counts"></p>
+        </div>
+        <div id="delete-container">
+            <h2>Remove</h2>
+        </div>
+    </div>
+    <p>(* = read)</p>
+    <button id="add-book">Add Book</button>
+    <div id="book-form-container" hidden>
+        <form action="" class="book-form">
+            <fieldset>
+                <legend>Add a Book to the Library</legend>
+                <label for="title">
+                    Title
+                    <input id="title" type="text" name="title">
+                </label>
+                <label for="author">
+                    Author
+                    <input id="author" type="text" name="author">
+                </label>
+                <label for="genre">
+                    Genre
+                    <input id="genre" type="text" name="genre">
+                </label>
+                <label for="pages">
+                    Pages
+                    <input id="pages" type="text" name="pages">
+                </label>
+                <div class="read-input">
+                    <label for="read">
+                        Have read?
+                    </label>
+                    <input id="read" type="checkbox" name="read">
+                </div>
+                <button id="submit-book">Add to Shelf</button>
+            </fieldset>
+        </form>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

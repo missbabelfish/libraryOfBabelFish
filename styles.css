@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 2;
+}
+
+body {
+    color: rgb(242, 247, 247);
+    height: 100vh;
+    background-color: rgb(10, 46, 48);
+    padding: 2rem;
+}
+
+body h1 {
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+fieldset {
+    height: 24rem;
+    display: grid;
+    justify-content: space-between;
+    padding: 1rem;
+    margin: 2rem 0;
+}
+
+input[type=text] {
+    width: 40ch;
+    height: 2rem;
+}
+
+input[type=checkbox] {
+    line-height: 2rem;
+}
+
+label {
+    width: fit-content;
+    display: grid;
+}
+
+.read-input{
+    display: grid;
+    grid-template-columns: 10ch 1fr;
+    justify-items: left;
+    align-items: center;
+    width: 15ch;
+}
+
+#add-book {
+    margin-top: 1.5rem;
+}
+
+#add-book, #submit-book {
+    background: linear-gradient(0deg, rgba(115,204,204,1) 0%, rgba(255,177,9,1) 100%);
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgb(6, 11, 141);
+    color: rgb(5, 39, 43);
+    font-weight: 700;
+    padding: 1rem 1rem;
+}
+
+#submit-book {
+    margin: 1rem 0;
+    width: 18ch;
+    padding: 0;
+}
+
+#add-book:hover, #submit-book:hover {
+    background-color: orange;
+    color: black;
+}
