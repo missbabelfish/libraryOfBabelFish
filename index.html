@@ -9,27 +9,17 @@
 <body>
     <h1>Library of BabelFish</h1>
     <div class="container">
-        <div id="title-container">
-            <h2>Title</h2>
-            <p id="titles"></p>
+        <div class="columns">
+            <h3>Title</h3>
+            <h3>Author</h3>
+            <h3>Genre</h3>
+            <h3>Pages</h3>
+            <h3 id="read">Read?</h3>
+            <h3 id="remove">Remove</h3>
         </div>
-        <div id="author-container">
-            <h2>Author</h2>
-            <p id="authors"></p>
-        </div>
-        <div id="genre-container">
-            <h2>Genre</h2>
-            <p id="genres"></p>
-        </div>
-        <div id="page-container">
-            <h2>Length</h2>
-            <p id="page-counts"></p>
-        </div>
-        <div id="delete-container">
-            <h2>Remove</h2>
+        <div id="books-container">
         </div>
     </div>
-    <p>(* = read)</p>
     <button id="add-book">Add Book</button>
     <div id="book-form-container" hidden>
         <form action="" class="book-form">
@@ -49,13 +39,13 @@
                 </label>
                 <label for="pages">
                     Pages
-                    <input id="pages" type="text" name="pages">
+                    <input id="pages" type="number" name="pages">
                 </label>
                 <div class="read-input">
                     <label for="read">
                         Have read?
                     </label>
-                    <input id="read" type="checkbox" name="read">
+                    <input id="read-input" type="checkbox" name="read">
                 </div>
                 <button id="submit-book">Add to Shelf</button>
             </fieldset>
