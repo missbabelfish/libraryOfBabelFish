@@ -1,7 +1,8 @@
 // DOM elements
 const booksContainer = document.getElementById('books-container');
 const addBookBtn = document.getElementById('add-book');
-const bookForm = document.getElementById('book-form-container');
+const bookFormWindow = document.getElementById('book-form-container');
+const bookForm = document.getElementById('book-form')
 const titleInput = document.getElementById('title');
 const authorInput = document.getElementById('author');
 const genreInput = document.getElementById('genre');
@@ -111,10 +112,20 @@ function addBookToLibrary(e) {
 
 function toggleBookForm() {
 	readInput.removeAttribute('checked');
-	bookForm.toggleAttribute('hidden');
+	bookFormWindow.toggleAttribute('hidden');
+}
+
+function validateForm(e) {
+	if (bookForm.checkValidity()) {
+		addBookToLibrary(e);
+	} else {
+		bookForm.setCustomValidity('Please fill out all fields')
+	}
 }
 
 // Event listeners
 window.addEventListener('load', () => library.displayBooks());
 addBookBtn.addEventListener('click', toggleBookForm);
-submitBook.addEventListener('click', addBookToLibrary);
+submitBook.addEventListener('click', (e) => {
+	validateForm(e)
+});
